@@ -117,7 +117,12 @@ if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
             <a style="float: right;" title="Git Add Commit" onClick="github1();" class="btn btn-primary btn-flat"><i class="fa fa-hdd-o"></i></a>
             <input style="width: 100px; float: right;" type="text" id="commit" class="form-control" placeholder="Commit ->">
             <a style="float: right;" title="Git Pull" onClick="github('git pull'); location.reload();" class="btn btn-primary btn-flat"><i class="fa fa-cloud-download"></i></a>
+            
+            <?php $dircl=str_replace("\\",'/',$klist[0]['localfolder']); $dircl=$dircl."/".$klist[0]['projeadi'];
+                 if(!is_dir($dircl)){ ?>
             <a style="float: right;" title="Git Clone project" onClick="github('git clone <?php echo $klist[0]['giturl'] ?>'); location.reload();" class="btn btn-warning btn-flat"><i class="fa fa-cloud-download"></i></a>
+            <?php } ?>
+               
         </div>
             
 	</div>

@@ -20,7 +20,7 @@ function execPrint($command) {
 //execPrint("git pull https://user:password@bitbucket.org/user/repo.git master");
 //$cmd="cd $dir & git checkout -b \"".$klist[0]['gitbranch']."\" & git checkout \"".$klist[0]['gitbranch']."\" & git config --global user.email ".$klist[0]['gituser']." & git remote add origin ".$klist[0]['giturl']." & git config --global user.name ".$klist[0]['gitbranch']." & $command & git status";
 if(strstr($command,"clone")){
-    $cmd="cd .. & $command & git status";
+    $cmd="cd .. & git status & $command & git status";
 }elseif(strstr($command,"pull")){
     $cmd="cd $dir & git checkout master & git config --global user.email ".$klist[0]['gituser']." & git remote add origin ".$klist[0]['giturl']." & git config --global user.name ".$klist[0]['gitbranch']." & git pull & git add . & git status";
 }else{
