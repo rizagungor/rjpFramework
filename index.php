@@ -69,7 +69,7 @@ if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <title>Framework by Rıza Güngör</title>
+  <title>rjpFramework by Rıza Güngör</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
