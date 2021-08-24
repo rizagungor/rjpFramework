@@ -39,7 +39,9 @@ $dir=str_replace("\\",'/',$klist[0]['localfolder']); $dir=$dir."/"."framework"."
 $file="p.bat";
 $dirfile=$dir.$file;
 $prgad=$klist[0]['projeadi'];
+$giturl=$klist[0]['giturl'];
 $code="cd c:\\wamp\\www\\$prgad \n
+git remote add origin $giturl \n
 git push origin master \n
 cd c:\\wamp\\www\\framework ";
 chmod($dirfile,0777);
