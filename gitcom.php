@@ -42,7 +42,7 @@ $prgad=$klist[0]['projeadi'];
 $giturl=$klist[0]['giturl'];
 $code="cd c:\\wamp\\www\\$prgad \n
 git remote add origin $giturl \n
-git push origin master \n
+git push -u origin master \n
 cd c:\\wamp\\www\\framework ";
 chmod($dirfile,0777);
 $myfile = fopen($dirfile, "w") or die("Unable to open file!");
