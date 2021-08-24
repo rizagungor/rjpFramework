@@ -106,10 +106,14 @@ if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
 
 	<div class="row">
     <div class="col-sm-3" style="background-color:#333;">Hoşgeldin <?php echo $klist[0]['adsoyad']; ?></div>
-	<div class="col-sm-5" style="background-color:#333;">RJP Framework <?php echo $klist[0]['projeadi']; ?></div>
+	<div class="col-sm-5" style="background-color:#333;"><a title="Home" href="index.php">RJP Framework <?php echo $klist[0]['projeadi']; ?></a> 
+        <a style="float: right;" title="Refresh" onClick="location.reload();" class="btn btn-primary btn-flat"><i class="fa fa-refresh"></i></a>
+    </div>
 		<div class="col-sm-4" style="background-color:#333;">
-			<a style="float: left;" title="Save" onClick="dosyakadet();" class="btn btn-default btn-flat"><i class="fa fa-hdd-o"></i></a>
+			<?php if(isset($_GET['f'])){ ?>
+            <a style="float: left;" title="Save" onClick="dosyakadet();" class="btn btn-default btn-flat"><i class="fa fa-hdd-o"></i></a>
 			<a style="float: left;" title="Upload FTP this file" onClick="ftpkaydet();" class="btn btn-default btn-flat"><i class="fa fa-cloud-upload"></i></a>
+            <?php } ?>
 			<a style="float: right; margin-left: 20px;" href="<?php echo $logoutAction; ?>" class="btn btn-danger btn-flat">Exit</a>
             
             <!--<a style="float: right;" title="Git Push" onClick="github('p.bat');" class="btn btn-warning btn-flat"><i class="fa fa-cloud-upload"></i></a>-->
