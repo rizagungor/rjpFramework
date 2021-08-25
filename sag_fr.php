@@ -22,7 +22,7 @@
 	?>
 	<div id="kk<?php echo $key['kat_id']; ?>" class="tab-pane fade <?php if($say==1){ echo "in active";} ?>">
         <p>
-			<a href="yenikod.php?kat=kk&d=dd"><i class="glyphicon glyphicon-plus-sign"></i></a><br><br>
+			<a href="yenikodEkle.php?kat=<?php echo $key['kat_id']; ?>"><i class="glyphicon glyphicon-plus-sign"></i></a><br><br>
 				
 			<?php 
 						$pd=new rz_PDO(); $sayi=0;
