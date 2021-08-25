@@ -37,7 +37,7 @@
 					<?php if($keyi['html']==1){ ?>
 					<a style="cursor: pointer;" onClick="kodEkle('<?php echo $keyi["komut_id"]; ?>','html')" title="HTML5"><img src="img/html5.png" style="height: 20px;"></a><?php } ?>
 					
-				<a href="yenikodSil.php?id=<?php echo $keyi["komut_id"]; ?>" style="cursor: pointer; float: right;" title="Delete this code"><span class="	glyphicon glyphicon-trash"></span> &nbsp;</a>
+				<a href="yenikodSil_.php?id=<?php echo $keyi["komut_id"]; ?>" style="cursor: pointer; float: right;" title="Delete this code"><span class="	glyphicon glyphicon-trash"></span> &nbsp;</a>
 				<a href="yenikodDuzenle.php?id=<?php echo $keyi["komut_id"]; ?>" style="cursor: pointer; float: right; padding-right: 25px;" title="Edit this code"><span class="glyphicon glyphicon-edit"></span> &nbsp;</a>	
 			</div>
 		<?php } ?>

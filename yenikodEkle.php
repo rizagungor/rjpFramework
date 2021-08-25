@@ -120,7 +120,7 @@ if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
 
 	  <div class="col-sm-7" style="background-color:#333;">
 
-		<?php include_once("kodduzenle_orta_fr.php"); ?>
+		<?php include_once("kodekle_orta_fr.php"); ?>
 	  </div>
 
 	  <div class="col-sm-3" style="background-color:#333;">
