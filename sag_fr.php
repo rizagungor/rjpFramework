@@ -3,8 +3,9 @@
   <ul class="nav nav-pills">
 	  <?php 
 	$pd=new rz_PDO(); $say=0;
-	$klist=$pd->Sorgu("SELECT * FROM fr_kat");
-	  foreach ($klist as $key){ $say++;
+        
+	$katlist=$pd->Sorgu("SELECT * FROM fr_kat where seviye<".$klist[0]['seviye_id']."");
+	  foreach ($katlist as $key){ $say++;
 		  if($say==1){
 	?>
     <li class="active"><a data-toggle="pill" href="#kk<?php echo $key['kat_id']; ?>"><?php echo $key['kat_adi']; ?></a></li>
@@ -16,8 +17,8 @@
 
 	  <?php 
 	$pd=new rz_PDO(); $say=0;
-	$klist=$pd->Sorgu("SELECT * FROM fr_kat");
-	  foreach ($klist as $key){ $say++;
+	$katlist=$pd->Sorgu("SELECT * FROM fr_kat where seviye<".$klist[0]['seviye_id']."");
+	  foreach ($katlist as $key){ $say++;
 	?>
 	<div id="kk<?php echo $key['kat_id']; ?>" class="tab-pane fade <?php if($say==1){ echo "in active";} ?>">
         <p>
@@ -25,8 +26,8 @@
 				
 			<?php 
 						$pd=new rz_PDO(); $sayi=0;
-						$klisti=$pd->Sorgu("SELECT * FROM fr_komut where kat_id='$key[kat_id]'");
-						  foreach ($klisti as $keyi){ $sayi++;
+						$katlisti=$pd->Sorgu("SELECT * FROM fr_komut where kat_id='$key[kat_id]'");
+						  foreach ($katlisti as $keyi){ $sayi++;
 						?>
 				<div>
 				<a title="<?php echo htmlentities($keyi['komutadi']); ?>" style="cursor: pointer;"><?php echo htmlentities($keyi['komutadi']); ?></a>
